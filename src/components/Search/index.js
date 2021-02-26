@@ -1,8 +1,11 @@
 import React from "react";
+import "./style.css";
 
 function Search() {
     return (
-        <form className="search" type="search" placeholder="Search"></form>
+        <div className="container">
+            <input className="search mx-auto" type="search" placeholder="Search"></input>
+        </div>
     );
 }
 
