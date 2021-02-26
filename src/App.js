@@ -1,24 +1,20 @@
+import React, { useEffect, useState } from "react";
 import './App.css';
-import API from "./utils"
 import Hero from "./components/Hero";
 import Search from "./components/Search";
-import Table from "./components/Table"
+import Table from "./components/Table";
+import employees from "./utils/employees.json"
 
 function App() {
 
-  const [emps, setEmps] = useState([]);
+  const [emps, setEmps] = useState(employees);
   const [getSearch, setSearch] = useState("");
 
-  useEffect(() => {loadEmps()}, []);
+  useEffect(() => {
+    setEmps(employees);
+  });
 
-  loadEmps = () => {
-    API.findUsers()
-      .then(res => {
-        setEmps(res);
-      });
-  } 
-
-  handleInputChange = (e) => {
+  const handleInputChange = (e) => {
     setSearch(e.target.value);
   }
 
@@ -27,10 +23,13 @@ function App() {
     <div>
       <Hero />
       <Search 
-        change={handleInputChange}
-        val={getSearch}
+        handleInputChange={handleInputChange}
+        // handleFormSubmit={handleFormSubmit}
+        results={getSearch}
       />
-      <Table />
+      <Table 
+        employees={emps}
+      />
     </div>
   );
 }

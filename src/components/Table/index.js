@@ -1,6 +1,6 @@
 import React from "react";
 
-function Table() {
+function Table(props) {
     return (
         <table className="table table-striped">
             <thead>
@@ -13,13 +13,15 @@ function Table() {
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <th scope="row">Image1</th>
-                    <td>Mark ZUxkk</td>
-                    <td>1010-2020-33030</td>
-                    <td>e@mdo</td>
-                    <td>12-15-1998</td>
-                </tr>
+                {props.employees.map(({ id, name, image, phone, email, dob }, index) => {
+                    <tr>
+                        <th scope="row">{image}</th>
+                        <td>{name}</td>
+                        <td>{phone}</td>
+                        <td>{email}</td>
+                        <td>{dob}</td>
+                    </tr>
+                })}
             </tbody>
         </table>
     );

@@ -1,0 +1,42 @@
+[
+    {
+        "id": 1,
+        "name": "Cali Fraser",
+        "image": "./assets/*",
+        "phone": "209-200-5647",
+        "email": "sadarshgoyal12348@paikhuuok.com",
+        "dob": "14/08/1973"
+    },
+    {
+        "id": 2,
+        "name": "Jolyon Thornton",
+        "image": "./assets/*",
+        "phone": "702-201-3883",
+        "email": "qsyed@smokebuddyapp.com",
+        "dob": "22/02/1983"
+    },
+    {
+        "id": 3,
+        "name": "Mustafa Stephens",
+        "image": "./assets/*",
+        "phone": "702-202-2313",
+        "email": "jazizyaftiniaziz0@txtr.site",
+        "dob": "26/05/2001"
+    },
+    {
+        "id": 4,
+        "name": "Wil Holding",
+        "image": "./assets/*",
+        "phone": "319-208-0039",
+        "email": "nsta@instaku-media.com",
+        "dob": "16/04/2019"
+    },
+    {
+        "id": 5,
+        "name": "Christy Burks",
+        "image": "./assets/*",
+        "phone": "217-200-9689",
+        "email": "4adnan_lolm@wonderwaregroup.com",
+        "dob": "21/07/2019"
+    }
+]

@@ -1,10 +1,16 @@
 import React from "react";
 import "./style.css";
 
-function Search() {
+function Search(props) {
     return (
         <div className="container">
-            <input className="search mx-auto" type="search" placeholder="Search" onChange={() => props.change} value={props.val}></input>
+            <input 
+            className="search mx-auto" 
+            type="search" 
+            placeholder="Search" 
+            onChange={() => props.change} 
+            value={props.val}
+            />
         </div>
     );
 }
