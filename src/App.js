@@ -9,7 +9,7 @@ function App() {
   const [emps, setEmps] = useState([]);
   const [getSearch, setSearch] = useState("");
 
-  userEffect(() => {loadEmps()}, []);
+  useEffect(() => {loadEmps()}, []);
 
   loadEmps = () => {
     API.findUsers()
@@ -18,11 +18,18 @@ function App() {
       });
   } 
 
+  handleInputChange = (e) => {
+    setSearch(e.target.value);
+  }
+
 
   return (
     <div>
       <Hero />
-      <Search />
+      <Search 
+        change={handleInputChange}
+        val={getSearch}
+      />
       <Table />
     </div>
   );
